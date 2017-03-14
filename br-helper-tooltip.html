@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../paper-tooltip/paper-tooltip.html">
+
+<!--
+`br-helper-tooltip`
+A simple help icon with a tooltip as a Polymer web component
+
+@demo demo/index.html
+-->
+
+
+<dom-module id="br-helper-tooltip">
+  <style>
+    :host {
+      margin: 0 10px;
+    }
+    :host #helperIcon {
+      color: var(--helper-icon-color,inherit);
+    }
+  </style>
+  <template>
+    <iron-icon id="helperIcon" icon="icons:help-outline"></iron-icon>
+    <paper-tooltip id="helperTooltip" for="helperIcon" position="{{position}}">
+      <!-- This hidden span is to bypass a bug which causes content not to show -->
+      <span hidden>X</span>
+      <content></content>
+    </paper-tooltip>
+  </template>
+  <script>
+    Polymer({
+      is: 'br-helper-tooltip',
+
+      properties: {
+        position: {
+          type: String,
+          value: "right"
+        }
+      }
+    })
+  </script>
+</dom-module>

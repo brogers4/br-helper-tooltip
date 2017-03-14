@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>br-helper-tooltip demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../br-helper-tooltip.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic br-helper-tooltip demo</h3>
+      <demo-snippet>
+        <template>
+          <br-helper-tooltip>
+              Here is some helpful information.
+          </br-helper-tooltip>
+        </template>
+      </demo-snippet>
+      <h3>br-helper-tooltip demo of different directions</h3>
+      <demo-snippet>
+        <template>
+          <br-helper-tooltip position="top">
+              Here is some helpful information on top.
+          </br-helper-tooltip>
+          <br-helper-tooltip position="right">
+              Here is some helpful information on right.
+          </br-helper-tooltip>
+          <br-helper-tooltip position="bottom">
+              Here is some helpful information on bottom.
+          </br-helper-tooltip>
+          <br-helper-tooltip position="left">
+              Here is some helpful information on left.
+          </br-helper-tooltip>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
